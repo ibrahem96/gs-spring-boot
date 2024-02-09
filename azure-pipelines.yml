@@ -21,12 +21,9 @@ steps:
   inputs:
     mavenPomFile: 'complete/pom.xml'
     publishJUnitResults: true
+    mavenVersionOption: 'Default'
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     testRunTitle: 'myTest'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
-    mavenVersionOption: 'Path'
     mavenSetM2Home: false
-    mavenAuthenticateFeed: true
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
