@@ -9,14 +9,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+
 steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'complete/pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.7'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
     goals: 'package'
+
